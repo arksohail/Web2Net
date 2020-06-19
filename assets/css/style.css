@@ -300,6 +300,21 @@ nav {
 .right-content figure {
 	padding: 25px 50px;
 }
-.right-content figure img{
+
+.right-content figure img {
 	max-height: 530px;
+}
+
+/* 5 Footer Stylings
+	 ========================================================================== */
+
+footer {
+	padding: 50px 0 0;
+}
+
+footer p {
+	padding: 35px;
+	text-align: center;
+	background: #55565b;
+	color: #fff;
 }
