@@ -217,3 +217,89 @@ nav {
 	color: #d3301f;
 	background: transparent;
 }
+
+/* 4 Work Stylings
+	 ========================================================================== */
+
+.work .wrapper {
+	padding: 46px 20px;
+}
+
+.work h2 {
+	font-weight: 700;
+	font-size: 40px;
+	text-align: center;
+}
+
+.tab {
+	margin: 28px auto 0;
+	padding: 2px;
+	width: max-content;
+	border: 2px solid #dedede;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.tablinks {
+	padding: 10px 30px;
+	font-size: 23px;
+	color: #55565b;
+	background: transparent;
+	border-radius: 50px;
+	letter-spacing: 2px;
+}
+
+.tablinks.active {
+	color: #fff;
+	background: #d22e20;
+}
+
+.tabcontent {
+	display: flex;
+}
+
+.left-content, .right-content {
+	flex: 0 1 44.9%;
+}
+
+.left-content h3 {
+	margin-top: 88px;
+	font-weight: 700;
+	font-size: 41px;
+	line-height: 1.2;
+}
+
+.left-content p {
+	margin-top: 35px;
+	color: #696c71;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.left-content button {
+	border: 1px solid #d3301f;
+	background-color: #d3301f;
+	color: #fff;
+	margin-top: 60px;
+	font-size: 28px;
+	letter-spacing: 3px;
+	padding: 17px 25px;
+}
+
+.left-content button:hover {
+	background-color: transparent;
+	color: #d22e20;
+	border-color: #d22e20;
+}
+
+.right-content {
+	margin-left: 4.2%;
+}
+
+.right-content figure {
+	padding: 25px 50px;
+}
+.right-content figure img{
+	max-height: 530px;
+}
