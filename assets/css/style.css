@@ -158,3 +158,62 @@ nav {
 .main-navigation a:hover, .secondary-navigation a:hover {
 	color: #da4121;
 }
+
+/* 3 Banner Stylings
+	 ========================================================================== */
+
+.banner {
+	background: #fdd540 url('../images/banner-background.jpg') no-repeat;
+	background-position: top 43% left;
+	background-size: 119% 150%;
+}
+
+.banner .wrapper {
+	padding: 276px 30px 116px;
+}
+
+.banner .content {
+	width: 60%;
+}
+
+.banner h2, .banner p, .banner button {
+	color: #fff;
+}
+
+.banner h2 {
+	font-size: 52px;
+	font-weight: 600;
+	line-height: 1.22;
+}
+
+.banner p {
+	margin-top: 34px;
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 1.55px;
+}
+
+.cta-holder {
+	margin-top: 50px;
+}
+
+.cta-holder button {
+	background: transparent;
+	border: 1px solid;
+	font-size: 21px;
+	letter-spacing: 3px;
+	font-weight: 600;
+	padding: 17px 32px;
+}
+
+.cta-holder .cta-red {
+	background-color: #d3301f;
+	border-color: #d3301f;
+	margin-right: 20px;
+}
+
+.cta-holder button:hover, .cta-holder .cta-red:hover {
+	border-color: #d3301f;
+	color: #d3301f;
+	background: transparent;
+}
