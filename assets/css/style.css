@@ -64,6 +64,7 @@ table {
 
 * {
 	transition: .3s ease-in-out;
+	box-sizing: border-box;
 }
 
 body {
@@ -80,7 +81,7 @@ a, button {
 }
 
 .wrapper {
-	width: 94%;
+	width: 93.2%;
 	/*Temporary*/
 	max-width: 1905px;
 	margin: 0 auto;
@@ -89,4 +90,71 @@ a, button {
 img {
 	width: 100%;
 	height: auto;
+}
+
+/* 3 Header Stylings
+	 ========================================================================== */
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #fff;
+}
+
+header .wrapper, .left-header, .main-navigation, .secondary-navigation {
+	display: flex;
+	align-items: center;
+}
+
+header .wrapper {
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+h1 {
+	width: 7%;
+	height: auto;
+}
+
+nav {
+	margin-left: 2%;
+}
+
+.main-navigation li, .secondary-navigation button {
+	width: max-content;
+}
+
+.main-navigation a, .secondary-navigation a {
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.main-navigation a {
+	font-size: 22px;
+	padding: 0 23px;
+}
+
+.secondary-navigation a {
+	font-size: 20px;
+	padding: 0 20px;
+}
+
+.secondary-navigation button {
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	background-size: 100% 300%;
+	background-image: linear-gradient(#da4121, #edb32f, #edb32f, #da4121);
+	color: #ffffff;
+	margin-right: 5px;
+}
+
+.secondary-navigation button:hover {
+	background-size: 100% 150%;
+}
+
+.main-navigation a:hover, .secondary-navigation a:hover {
+	color: #da4121;
 }
