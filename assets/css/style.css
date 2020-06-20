@@ -6,19 +6,7 @@
 /* 1.1 Reset Style Sheet
    ========================================================================== */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -26,25 +14,30 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -53,12 +46,470 @@ table {
 /* 1.2 Clear Fix
    ========================================================================== */
 
-.cf:before,
-.cf:after {
-  display: table;
-  content: " ";
+.cf:before, .cf:after {
+	display: table;
+	content: " ";
 }
 
-.cf:after { clear: both; }
+.cf:after {
+	clear: both;
+}
 
-.cf { *zoom: 1; }
+.cf {
+	*zoom: 1;
+}
+
+/* 2 Common Stylings
+	 ========================================================================== */
+
+* {
+	transition: .3s ease-in-out;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a, button {
+	text-decoration: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	display: inline-block;
+}
+
+.wrapper {
+	width: 93.2%;
+	/*Temporary*/
+	max-width: 1448;
+	margin: 0 auto;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* 3 Header Stylings
+	 ========================================================================== */
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 5;
+	background: #fff;
+}
+
+header .wrapper, .left-header, .main-navigation, .secondary-navigation {
+	display: flex;
+	align-items: center;
+}
+
+header .wrapper {
+	justify-content: space-between;
+	padding: 20px 0 23px;
+}
+
+.left-header {
+	justify-content: space-between;
+	flex: 0 1 51%;
+}
+
+.right-header {
+	flex: 0 1 34%;
+}
+
+h1 {
+	flex: 0 1 10%;
+	min-width: 50px;
+	height: auto;
+}
+
+h1 a {
+	width: 100%;
+	text-indent: -9999px
+}
+
+h1 img {
+	float: right
+}
+
+nav {
+	margin-left: 20px;
+	flex: 0 0 83%;
+	min-width: 450px;
+}
+
+.main-navigation {
+	width: 100%;
+	justify-content: space-between;
+}
+
+.main-navigation a, .secondary-navigation a {
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.main-navigation a {
+	font-size: 22px;
+}
+
+.secondary-navigation {
+	justify-content: flex-end;
+}
+
+.secondary-navigation a {
+	font-size: 20px;
+	padding: 0 20px;
+}
+
+.secondary-navigation button {
+	width: max-content;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	background-size: 100% 300%;
+	background-image: linear-gradient(#da4121, #edb32f, #edb32f, #da4121);
+	color: #ffffff;
+	margin-right: 5px;
+}
+
+.hamburger {
+	flex: 0 0 21px;
+	display: none;
+	margin-right: 20px;
+	cursor: pointer
+}
+
+.hamburger__top, .hamburger__mid, .hamburger__bottom {
+	width: 100%;
+	height: 3px;
+	margin-top: 4px;
+	display: block;
+	z-index: 10;
+	-webkit-transform-origin: left;
+	-ms-transform-origin: left;
+	transform-origin: left;
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	background-color: #7f7f7f;
+	text-indent: -9999px;
+	cursor: pointer
+}
+
+.hamburger__top {
+	margin-top: 0
+}
+
+.cross .hamburger__top {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.cross .hamburger__mid {
+	opacity: 0
+}
+
+.cross .hamburger__bottom {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+
+.secondary-navigation button:hover {
+	background-size: 100% 150%;
+}
+
+.main-navigation a:hover, .secondary-navigation a:hover {
+	color: #da4121;
+}
+
+/* 3 Banner Stylings
+	 ========================================================================== */
+
+.banner {
+	background: #fdd540 url('../images/banner-background.jpg') no-repeat;
+	background-position: top 43% left;
+	background-size: 119% 150%;
+}
+
+.banner .wrapper {
+	padding: 276px 30px 116px;
+}
+
+.banner .content {
+	width: 70%;
+}
+
+.banner h2, .banner p, .banner button {
+	color: #fff;
+}
+
+.banner h2 {
+	font-size: 52px;
+	font-weight: 600;
+	line-height: 1.22;
+}
+
+.banner p {
+	margin-top: 34px;
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 1.55px;
+}
+
+.cta-holder {
+	margin-top: 50px;
+}
+
+.cta-holder button {
+	background: transparent;
+	border: 1px solid;
+	font-size: 21px;
+	letter-spacing: 3px;
+	font-weight: 600;
+	padding: 17px 32px;
+}
+
+.cta-holder .cta-red {
+	background-color: #d3301f;
+	border-color: #d3301f;
+	margin-right: 20px;
+}
+
+.cta-holder button:hover, .cta-holder .cta-red:hover {
+	border-color: #d3301f;
+	color: #d3301f;
+	background: transparent;
+}
+
+/* 4 Work Stylings
+	 ========================================================================== */
+
+.work .wrapper {
+	padding: 46px 20px;
+}
+
+.work h2 {
+	font-weight: 700;
+	font-size: 40px;
+	text-align: center;
+}
+
+.tab {
+	margin: 28px auto 0;
+	padding: 2px;
+	width: max-content;
+	border: 2px solid #dedede;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.tablinks {
+	padding: 10px 30px;
+	font-size: 23px;
+	color: #55565b;
+	background: transparent;
+	border-radius: 50px;
+	letter-spacing: 2px;
+}
+
+.tablinks.active {
+	color: #fff;
+	background: #d22e20;
+}
+
+.tabcontent {
+	display: flex;
+}
+
+.left-content, .right-content {
+	flex: 0 1 44.9%;
+}
+
+.left-content h3 {
+	margin-top: 88px;
+	font-weight: 700;
+	font-size: 41px;
+	line-height: 1.2;
+}
+
+.left-content p {
+	margin-top: 35px;
+	color: #696c71;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.left-content button {
+	border: 1px solid #d3301f;
+	background-color: #d3301f;
+	color: #fff;
+	margin-top: 60px;
+	font-size: 28px;
+	letter-spacing: 3px;
+	padding: 17px 25px;
+}
+
+.left-content button:hover {
+	background-color: transparent;
+	color: #d22e20;
+	border-color: #d22e20;
+}
+
+.right-content {
+	margin-left: 4.2%;
+	align-self: stretch;
+}
+
+.right-content figure {
+	padding: 25px 50px;
+	height: 100%;
+}
+
+.right-content figure img {
+	height: 100%;
+	max-height: 530px;
+}
+
+/* 5 Footer Stylings
+	 ========================================================================== */
+
+footer {
+	padding: 50px 0 0;
+}
+
+footer p {
+	padding: 35px;
+	text-align: center;
+	background: #55565b;
+	color: #fff;
+}
+
+/* 6 Media Queries Stylings
+	 ========================================================================== */
+
+/* Large devices (laptops/desktops, 1024px and down)  */
+
+@media only screen and (max-width: 1024px) {
+	.hamburger {
+		display: block;
+	}
+	nav {
+		margin-left: 0;
+		min-width: 320px;
+		position: absolute;
+		left: -320px;
+		top: 90px;
+		min-height: calc(100vh - 90px);
+		height: 100%;
+		background: #fff;
+	}
+	.nav-open {
+		left: 0;
+	}
+	.main-navigation {
+		display: block;
+	}
+	.main-navigation li {
+		padding: 15px 30px;
+	}
+	.banner .wrapper {
+		padding: 186px 0 93px;
+	}
+	.banner .content {
+		width: 100%;
+		padding: 10px;
+		border-radius: 10px;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	.banner h2 {
+		font-size: 36px;
+	}
+	.banner p {
+		font-size: 22px;
+	}
+	.cta-holder button {
+		margin: 10px 0;
+	}
+	.cta-holder .cta-red {
+		margin: 0;
+	}
+	.left-content, .right-content {
+		flex: 0 1 50%;
+		margin: 0;
+	}
+	footer {
+		padding: 0;
+	}
+}
+
+/* Medium devices (portrait tablets, 768px and down) */
+
+@media only screen and (max-width: 768px) {
+	.work .wrapper {
+		padding: 46px 0;
+	}
+	.work h2 {
+		font-size: 28px;
+	}
+	.work h3 {
+		font-size: 24px;
+	}
+	.work p {
+		margin-top: 15px;
+		font-size: 14px;
+	}
+	.tablinks, .left-content button {
+		padding: 10px 15px;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	.tabcontent {
+		flex-direction: column;
+		align-items: center;
+	}
+	.left-content, .right-content {
+		flex: 0 1 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.left-content {
+		order: 1;
+	}
+	.left-content h3 {
+		margin: 0;
+	}
+	.left-content button {
+		margin-top: 15px;
+	}
+}
+
+/* Small devices (landscape/portrait phone, 568px and up) */
+
+@media only screen and (max-width: 568px) {
+	.right-header {
+		position: fixed;
+		bottom: 15px;
+		left: -320px;
+		z-index: 6;
+	}
+	.secondary-navigation {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.secondary-navigation a {
+		padding: 15px 0;
+	}
+	.right-header.nav-open {
+		left: 30px;
+	}
+}

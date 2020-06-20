@@ -1,6 +1,7 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<!-- Setting the viewport for Media Query -->
@@ -8,29 +9,110 @@
 	<!-- Title of the webpage -->
 	<title>Web2Net | Assignment</title>
 	<!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
-	<link rel="shortcut icon" href="assets/images/logo.webp" />	
+	<link rel="shortcut icon" href="assets/images/logo.webp" />
 	<!-- Adding reference to font awesome -->
 	<script src="https://kit.fontawesome.com/8a875ecd24.js"></script>
 	<!-- Adding refence to Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet">
 	<!-- Default style-sheet is for 'media' type screen (color computer display).  -->
 	<link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
+
 <body>
 	<div class="container">
 		<!-- Start of the header -->
 		<header>
+			<div class="wrapper">
+				<!-- Start of the Hamburger -->
+				<div class="hamburger">
+					<span class="hamburger__top"></span>
+					<span class="hamburger__mid"></span>
+					<span class="hamburger__bottom"></span>
+				</div>
+				<!-- End of the Hamburger -->
+				<!-- Start of the Left Side Header -->
+				<div class="left-header">
+					<h1><a href="#" title="Man Day Brand Logo"><img src="assets/images/logo.webp" alt="Man Day Brand Logo">Web2Net</a>
+					</h1>
+					<nav>
+						<ul class="main-navigation">
+							<li><a href="#" title="Home">Home</a></li>
+							<li><a href="#" title="About">About</a></li>
+							<li><a href="#" title="Why ManDay?">Why ManDay?</a></li>
+							<li><a href="#" title="Features">Features</a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- End of the Left Side Header -->
+
+				<!-- Start of the Right Side Header -->
+				<div class="right-header">
+					<ul class="secondary-navigation">
+						<li>
+							<a href="#" title="Login">Login</a>
+						</li>
+						<li>
+							<button>Post a Requirement</button>
+						</li>
+					</ul>
+				</div>
+				<!-- Start of the Right Side Header -->
+			</div>
 		</header>
 		<!-- End of header -->
 		<!-- Start of main -->
 		<main>
+			<!-- Start of the Banner -->
+			<section class="banner" id="banner">
+				<div class="wrapper">
+					<div class="content">
+						<h2>Professional Passionate Designers To Clients &amp; Companies!</h2>
+						<p>Get connected to one of the biggest platforms...</p>
+						<div class="cta-holder">
+							<button class="cta-red">Hire A Designer</button><button>Join As Designer</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End of the Banner -->
+
+			<!-- Start of the Work Section -->
+			<section class="work" id="work">
+				<div class="wrapper">
+					<h2>How can we help?</h2>
+
+					<div class="tab">
+						<button class="tablinks active">I want to hire</button>
+						<button class="tablinks">I want to work</button>
+					</div>
+
+					<div id="toHire" class="tabcontent">
+						<div class="left-content">
+							<h3>What kind of work can I get done?</h3>
+							<p>How does "anything you want" sound? We have experts representing every technical, professional, and
+								creative field.</p>
+							<button>Post a Requirement</button>
+						</div>
+						<div class="right-content">
+							<figure>
+								<img src="assets/images/india-map.png" alt="India Map Depicting Various Tech Stack Developers">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End of the Work Section -->
 		</main>
 		<!-- End of main -->
 		<!-- Start of footer -->
 		<footer>
+			<p>All rights reserved &copy; 2020</p>
 		</footer>
 		<!-- End of footer -->
 	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
+
 </html>
