@@ -83,7 +83,7 @@ a, button {
 .wrapper {
 	width: 93.2%;
 	/*Temporary*/
-	max-width: 1905px;
+	max-width: 1448;
 	margin: 0 auto;
 }
 
@@ -99,6 +99,7 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 5;
 	background: #fff;
 }
 
@@ -109,20 +110,42 @@ header .wrapper, .left-header, .main-navigation, .secondary-navigation {
 
 header .wrapper {
 	justify-content: space-between;
-	padding: 20px 0;
+	padding: 20px 0 23px;
+}
+
+.left-header {
+	justify-content: space-between;
+	flex: 0 1 51%;
+}
+
+.right-header {
+	flex: 0 1 34%;
 }
 
 h1 {
-	width: 7%;
+	flex: 0 1 10%;
+	min-width: 50px;
 	height: auto;
 }
 
-nav {
-	margin-left: 2%;
+h1 a {
+	width: 100%;
+	text-indent: -9999px
 }
 
-.main-navigation li, .secondary-navigation button {
-	width: max-content;
+h1 img {
+	float: right
+}
+
+nav {
+	margin-left: 20px;
+	flex: 0 0 83%;
+	min-width: 450px;
+}
+
+.main-navigation {
+	width: 100%;
+	justify-content: space-between;
 }
 
 .main-navigation a, .secondary-navigation a {
@@ -132,7 +155,10 @@ nav {
 
 .main-navigation a {
 	font-size: 22px;
-	padding: 0 23px;
+}
+
+.secondary-navigation {
+	justify-content: flex-end;
 }
 
 .secondary-navigation a {
@@ -141,6 +167,7 @@ nav {
 }
 
 .secondary-navigation button {
+	width: max-content;
 	font-size: 20px;
 	font-weight: 500;
 	letter-spacing: 2px;
@@ -149,6 +176,50 @@ nav {
 	background-image: linear-gradient(#da4121, #edb32f, #edb32f, #da4121);
 	color: #ffffff;
 	margin-right: 5px;
+}
+
+.hamburger {
+	flex: 0 0 21px;
+	display: none;
+	margin-right: 20px;
+	cursor: pointer
+}
+
+.hamburger__top, .hamburger__mid, .hamburger__bottom {
+	width: 100%;
+	height: 3px;
+	margin-top: 4px;
+	display: block;
+	z-index: 10;
+	-webkit-transform-origin: left;
+	-ms-transform-origin: left;
+	transform-origin: left;
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	background-color: #7f7f7f;
+	text-indent: -9999px;
+	cursor: pointer
+}
+
+.hamburger__top {
+	margin-top: 0
+}
+
+.cross .hamburger__top {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.cross .hamburger__mid {
+	opacity: 0
+}
+
+.cross .hamburger__bottom {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg)
 }
 
 .secondary-navigation button:hover {
@@ -173,7 +244,7 @@ nav {
 }
 
 .banner .content {
-	width: 60%;
+	width: 70%;
 }
 
 .banner h2, .banner p, .banner button {
@@ -295,13 +366,16 @@ nav {
 
 .right-content {
 	margin-left: 4.2%;
+	align-self: stretch;
 }
 
 .right-content figure {
 	padding: 25px 50px;
+	height: 100%;
 }
 
 .right-content figure img {
+	height: 100%;
 	max-height: 530px;
 }
 
