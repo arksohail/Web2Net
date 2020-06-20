@@ -326,6 +326,12 @@ nav {
 }
 
 .tabcontent {
+	opacity: 0;
+	display: none;
+}
+
+.tabcontent.show {
+	opacity: 1;
 	display: flex;
 }
 
