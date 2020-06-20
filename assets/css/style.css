@@ -392,3 +392,124 @@ footer p {
 	background: #55565b;
 	color: #fff;
 }
+
+/* 6 Media Queries Stylings
+	 ========================================================================== */
+
+/* Large devices (laptops/desktops, 1024px and down)  */
+
+@media only screen and (max-width: 1024px) {
+	.hamburger {
+		display: block;
+	}
+	nav {
+		margin-left: 0;
+		min-width: 320px;
+		position: absolute;
+		left: -320px;
+		top: 90px;
+		min-height: calc(100vh - 90px);
+		height: 100%;
+		background: #fff;
+	}
+	.nav-open {
+		left: 0;
+	}
+	.main-navigation {
+		display: block;
+	}
+	.main-navigation li {
+		padding: 15px 30px;
+	}
+	.banner .wrapper {
+		padding: 186px 0 93px;
+	}
+	.banner .content {
+		width: 100%;
+		padding: 10px;
+		border-radius: 10px;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	.banner h2 {
+		font-size: 36px;
+	}
+	.banner p {
+		font-size: 22px;
+	}
+	.cta-holder button {
+		margin: 10px 0;
+	}
+	.cta-holder .cta-red {
+		margin: 0;
+	}
+	.left-content, .right-content {
+		flex: 0 1 50%;
+		margin: 0;
+	}
+	footer {
+		padding: 0;
+	}
+}
+
+/* Medium devices (portrait tablets, 768px and down) */
+
+@media only screen and (max-width: 768px) {
+	.work .wrapper {
+		padding: 46px 0;
+	}
+	.work h2 {
+		font-size: 28px;
+	}
+	.work h3 {
+		font-size: 24px;
+	}
+	.work p {
+		margin-top: 15px;
+		font-size: 14px;
+	}
+	.tablinks, .left-content button {
+		padding: 10px 15px;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+	.tabcontent {
+		flex-direction: column;
+		align-items: center;
+	}
+	.left-content, .right-content {
+		flex: 0 1 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.left-content {
+		order: 1;
+	}
+	.left-content h3 {
+		margin: 0;
+	}
+	.left-content button {
+		margin-top: 15px;
+	}
+}
+
+/* Small devices (landscape/portrait phone, 568px and up) */
+
+@media only screen and (max-width: 568px) {
+	.right-header {
+		position: fixed;
+		bottom: 15px;
+		left: -320px;
+		z-index: 6;
+	}
+	.secondary-navigation {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.secondary-navigation a {
+		padding: 15px 0;
+	}
+	.right-header.nav-open {
+		left: 30px;
+	}
+}
